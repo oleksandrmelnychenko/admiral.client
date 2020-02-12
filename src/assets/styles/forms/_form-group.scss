@@ -1,0 +1,78 @@
+@import '../mixins';
+@import '../variables';
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: url(../../../assets/images/sign-in/pencil.png) no-repeat;
+    background-size: contain;
+    @media screen and (max-width: 425px) {
+      left: 10px;
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    height: 30px;
+    border-right: 1px solid $color_border;
+    @media screen and (max-width: 425px) {
+      left: 40px;
+    }
+  }
+  &__field {
+    padding-left: 70px;
+    color: $color_grey;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    @media screen and (max-width: 425px) {
+      padding-left: 50px;
+    }
+    &:hover {
+      @include hover-default;
+    }
+    &::placeholder {
+      color: $color_placeholder;
+      letter-spacing: 0.7px;
+      @media screen and (max-width: 425px) {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  &__error-message-validate {
+    position: absolute;
+    padding-left: 70px;
+    width: 100%;
+    bottom: 3px;
+    left: 0;
+    color: $color_error;
+    text-align: left;
+    font-size: 13px;
+    @media screen and (max-width: 425px) {
+      padding-left: 20px;
+      font-size: 11px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      top: 8px;
+      left: 49px;
+      border-radius: 50%;
+      background: $color_error;
+      box-sizing: border-box;
+      @media screen and (max-width: 425px) {
+        left: 10px;
+      }
+    }
+  }
+}

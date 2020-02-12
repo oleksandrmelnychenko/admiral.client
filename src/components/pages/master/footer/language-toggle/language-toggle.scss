@@ -1,0 +1,35 @@
+@import '../../../../../assets/styles/variables';
+
+.language-selector {
+  display: flex;
+  position: absolute;
+  top: 16px;
+  right: 60px;
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+  @media screen and (max-width: 455px) {
+    padding-top: 10px;
+    justify-content: center;
+  }
+  &__item {
+    padding: 0 10px;
+    height: 12px;
+    border-right: 1px solid $color_breadcrumb_text_active;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .active {
+    color: $color_white;
+  }
+  button {
+    display: block;
+    padding: 0;
+    border: none;
+    height: inherit;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: transparent;
+  }
+}

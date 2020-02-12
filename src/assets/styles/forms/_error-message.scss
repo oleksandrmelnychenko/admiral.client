@@ -1,0 +1,35 @@
+@import '../variables';
+
+.error-body {
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  color: $color_error;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 50px;
+  border: 1px solid $color_error;
+  background: $color_error-alpha;
+  transition: 0.3s all ease;
+  z-index: 1;
+  @media screen and (max-width: 425px) {
+    font-size: 10px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: calc(50% - 17px);
+    left: 10px;
+    background: url('../../../assets/images/sign-in/server.svg');
+    box-sizing: border-box;
+  }
+}

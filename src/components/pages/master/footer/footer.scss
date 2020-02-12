@@ -1,0 +1,27 @@
+@import '../../../../assets/styles/variables';
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+
+  z-index: 1;
+  &__navigation {
+    padding: 13px 60px;
+  }
+  &__body {
+    position: relative;
+    min-height: 43px;
+    padding: 13px 60px;
+    background-color: $color_grey;
+    color: $color_breadcrumb_text_active;
+  }
+  @media screen and (max-width: 455px) {
+    justify-content: center;
+  }
+}

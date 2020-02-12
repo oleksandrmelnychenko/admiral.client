@@ -1,0 +1,50 @@
+@import '../../../assets/styles/forms/form-group';
+@import '../../../assets/styles/forms/error-message';
+@import '../../../assets/styles/forms/btn';
+@import '../../../assets/styles/variables';
+
+.account {
+  &__form {
+    position: relative;
+    width: 660px;
+    margin: 0 15px;
+    padding: 40px 80px 10px 80px;
+    text-align: center;
+    background-color: $color_form;
+    box-shadow: 0px 20px 120px 0px rgba(58, 55, 76, 0.15);
+    transition: all 0.3s ease;
+    @media screen and (max-width: 1440px) {
+      margin: 0;
+      transform: scale(0.85);
+    }
+    @media screen and (max-width: 590px) {
+      padding: 0 15px;
+      transform: scale(0.95);
+    }
+  }
+  &__logo {
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__form-title {
+    padding: 0 0 70px;
+    font-size: 24px;
+    color: $color_grey;
+    @media screen and (max-width: 425px) {
+      padding-bottom: 30px;
+      font-size: 18px;
+    }
+    letter-spacing: 0.7px;
+  }
+
+  &__forgot-psw {
+    margin-top: 30px;
+    display: inline-block;
+    transition: 0.3s color ease;
+    &:hover {
+      color: $color_hover;
+    }
+  }
+}
